@@ -34,7 +34,7 @@ RUN useradd -m -G ${PERSISTENT_VOLUME_GROUP} calibre
 RUN mkdir -p ${PERSISTENT_VOLUME_DIR}/.config \
     && ln -s ${PERSISTENT_VOLUME_DIR}/.config /home/calibre/.config
 
-VOLUME [ ${PERSISTENT_VOLUME_DIR} ]
+VOLUME ${PERSISTENT_VOLUME_DIR}
 
 # Environment variables for all Wine commands
 #
